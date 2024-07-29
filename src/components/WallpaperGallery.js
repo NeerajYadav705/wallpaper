@@ -6,6 +6,78 @@ import { motion } from 'framer-motion';
 const wallpapers = [
   {
     id: 1,
+    url: "/assets/cartoon1.jpg",
+    title: "Wallpaper 1",
+    category: "Cartoon",
+  },
+  {
+    id: 1,
+    url: "/assets/c11.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
+    url: "/assets/c10.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
+    url: "/assets/c9.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
+    url: "/assets/c8.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
+    url: "/assets/c7.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
+    url: "/assets/c6.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
+    url: "/assets/c5.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
+    url: "/assets/c4.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
+    url: "/assets/c3.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
+    url: "/assets/c2.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
+    url: "/assets/c.jpg",
+    title: "Wallpaper 1",
+    category: "Couples",
+  },
+  {
+    id: 1,
     url: "/assets/batman.jpg",
     title: "Wallpaper 1",
     category: "Super Heros",

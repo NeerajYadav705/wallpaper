@@ -1,6 +1,6 @@
 import React from 'react';
 
-const categories = ['All', 'Super Heros', 'Cartoons', 'Abstract'];
+const categories = ['All', 'Super Heros', 'Cartoons', 'Abstract','Couples'];
 
 function CategoryFilter({ selectedCategory, setSelectedCategory }) {
   return (
