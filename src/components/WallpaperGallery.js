@@ -1,77 +1,77 @@
-import React, { useState, useEffect } from 'react';
-import WallpaperCard from './WallpaperCard';
-import CategoryFilter from './CategoryFilter';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import WallpaperCard from "./WallpaperCard";
+import CategoryFilter from "./CategoryFilter";
+import { motion } from "framer-motion";
 
 const wallpapers = [
   {
-    id: 1,
+    id: 40,
     url: "/assets/cartoon1.jpg",
     title: "Wallpaper 1",
     category: "Cartoon",
   },
   {
-    id: 1,
+    id: 39,
     url: "/assets/c11.jpg",
     title: "Wallpaper 1",
     category: "Couples",
   },
   {
-    id: 1,
+    id: 38,
     url: "/assets/c10.jpg",
     title: "Wallpaper 1",
     category: "Couples",
   },
   {
-    id: 1,
+    id: 37,
     url: "/assets/c9.jpg",
     title: "Wallpaper 1",
     category: "Couples",
   },
   {
-    id: 1,
+    id: 36,
     url: "/assets/c8.jpg",
     title: "Wallpaper 1",
     category: "Couples",
   },
   {
-    id: 1,
+    id: 35,
     url: "/assets/c7.jpg",
     title: "Wallpaper 1",
     category: "Couples",
   },
   {
-    id: 1,
+    id: 34,
     url: "/assets/c6.jpg",
     title: "Wallpaper 1",
     category: "Couples",
   },
   {
-    id: 1,
+    id: 33,
     url: "/assets/c5.jpg",
     title: "Wallpaper 1",
     category: "Couples",
   },
   {
-    id: 1,
+    id: 32,
     url: "/assets/c4.jpg",
     title: "Wallpaper 1",
     category: "Couples",
   },
   {
-    id: 1,
+    id: 31,
     url: "/assets/c3.jpg",
     title: "Wallpaper 1",
     category: "Couples",
   },
   {
-    id: 1,
+    id: 30,
     url: "/assets/c2.jpg",
     title: "Wallpaper 1",
     category: "Couples",
   },
   {
-    id: 1,
+    id: 29,
     url: "/assets/c.jpg",
     title: "Wallpaper 1",
     category: "Couples",
@@ -250,20 +250,26 @@ const wallpapers = [
 
 function WallpaperGallery() {
   const [wallpaperList, setWallpaperList] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
     // Set the local wallpaper list
     setWallpaperList(wallpapers);
   }, []);
 
-  const filteredWallpapers = selectedCategory === 'All'
-    ? wallpaperList
-    : wallpaperList.filter(wallpaper => wallpaper.category === selectedCategory);
+  const filteredWallpapers =
+    selectedCategory === "All"
+      ? wallpaperList
+      : wallpaperList.filter(
+          (wallpaper) => wallpaper.category === selectedCategory
+        );
 
   return (
     <div>
-      <CategoryFilter selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+      <CategoryFilter
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
       <div className="columns-1 sm:columns-2 md:columns-5 gap-4 mt-4">
         {filteredWallpapers.map((wallpaper) => (
           <motion.div
