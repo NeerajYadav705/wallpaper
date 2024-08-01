@@ -5,7 +5,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 function WallpaperCard({ wallpaper }) {
   return (
     <div className="relative overflow-hidden rounded-lg group">
-      <img src={wallpaper.url} alt={wallpaper.title} className="w-full h-auto object-cover" />
+      <img src={wallpaper.url} alt={wallpaper.title} className="w-auto h-auto object-cover" />
       <a
         href={wallpaper.url}
         download

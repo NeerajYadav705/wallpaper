@@ -26,9 +26,11 @@ function Navbar({ selectedCategory, setSelectedCategory }) {
   }, []);
 
   return (
-    <nav className= "h-16 bg-gray-900 text-white px-4 py-3 flex justify-between items-center relative">
+    <nav className="h-16 bg-slate-900 text-white px-4 py-3 flex justify-between items-center relative">
       <div className="text-xl font-bold">Wallpapers For You</div>
+
       <div className="flex items-center space-x-4">
+        {/* Mobile Menu Toggle */}
         <button
           className={`sm:hidden text-white p-2 rounded-full transition-all duration-300 flex items-center justify-center ${
             isCategoryOpen ? 'bg-opacity-100' : 'bg-opacity-50'
@@ -38,6 +40,8 @@ function Navbar({ selectedCategory, setSelectedCategory }) {
           <FontAwesomeIcon icon={faBars} className="text-xl" />
         </button>
       </div>
+
+      {/* Category Filter Dropdown for Mobile */}
       <div
         ref={dropdownRef}
         className={`sm:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-10 transform transition-transform duration-300 ${
