@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import WallpaperCard from "./WallpaperCard";
-import CategoryFilter from "./CategoryFilter";
 import { motion } from "framer-motion";
 
 const wallpapers = [
@@ -248,41 +247,26 @@ const wallpapers = [
   // Add more wallpapers with categories here
 ];
 
-function WallpaperGallery() {
-  const [wallpaperList, setWallpaperList] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  useEffect(() => {
-    // Set the local wallpaper list
-    setWallpaperList(wallpapers);
-  }, []);
-
+function WallpaperGallery({ selectedCategory }) {
   const filteredWallpapers =
     selectedCategory === "All"
-      ? wallpaperList
-      : wallpaperList.filter(
+      ? wallpapers
+      : wallpapers.filter(
           (wallpaper) => wallpaper.category === selectedCategory
         );
 
   return (
-    <div>
-      <CategoryFilter
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-      />
-      <div className="columns-1 sm:columns-2 md:columns-5 gap-4 mt-4">
-        {filteredWallpapers.map((wallpaper) => (
-          <motion.div
-            key={wallpaper.id}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-            className="mb-4"
-          >
-            <WallpaperCard wallpaper={wallpaper} />
-          </motion.div>
-        ))}
-      </div>
+    <div className="h-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 px-2 sm:px-0">
+      {filteredWallpapers.map((wallpaper) => (
+        <motion.div
+          key={wallpaper.id}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <WallpaperCard wallpaper={wallpaper} />
+        </motion.div>
+      ))}
     </div>
   );
 }

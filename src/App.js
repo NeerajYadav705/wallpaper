@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import CategoryFilter from './components/CategoryFilter';
 import WallpaperGallery from './components/WallpaperGallery';
+import './index.css';
+import Footer from './components/Footer';
 
 function App() {
-  return (
-    <div className="min-h-screen bg-slate-950">
-      <header className="bg-slate-900 text-slate-300 text-center py-5">
-        <h1 className="text-3xl">Wallpaper</h1>
-      </header>
-      <main className="p-5 container mx-auto">
-        <WallpaperGallery />
-      </main>
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
-      <footer className='text-slate-200 h-14 flex items-center justify-center'>
-        I'm a Footer
-      </footer>
+  return (
+    <div>
+      <Navbar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+      <div className="hidden sm:block container mx-auto my-4 px-4">
+        <CategoryFilter selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+      </div>
+      <div className="container mx-auto px-4">
+        <WallpaperGallery selectedCategory={selectedCategory} />
+      </div>
+      <Footer/>
     </div>
   );
 }
