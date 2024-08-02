@@ -4,7 +4,7 @@ import { faTimes, faHome, faStar, faImage, faHeart, faUser } from '@fortawesome/
 
 const categories = [
   { name: 'All', icon: faHome },
-  { name: 'Super Heroes', icon: faStar },
+  { name: 'Super Heros', icon: faStar },
   { name: 'Cartoons', icon: faImage },
   { name: 'Abstract', icon: faHeart },
   { name: 'Couples', icon: faUser },
