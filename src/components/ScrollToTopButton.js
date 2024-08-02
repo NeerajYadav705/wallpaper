@@ -30,7 +30,7 @@ function ScrollToTopButton() {
 
   return (
     <button
-      className={`h-16 w-16 flex items-center justify-center fixed bottom-5 right-5 p-3 rounded-full bg-slate-950 hover:bg-slate-800 text-white shadow-lg transition-opacity duration-300 ${
+      className={`h-16 w-16 flex items-center justify-center fixed bottom-5 right-5 p-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white shadow-lg transition-opacity duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
       onClick={scrollToTop}

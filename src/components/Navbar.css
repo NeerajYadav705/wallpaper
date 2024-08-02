@@ -1,0 +1,29 @@
+/* Star animations */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: url('/public/assets/stars.jpg') repeat;
+    animation: star-animation 100s linear infinite;
+    opacity: 0.5;
+    pointer-events: none; /* Ensures that it doesn't block other elements */
+    z-index: 1; /* Ensure stars are below other elements */
+  }
+  
+  @keyframes star-animation {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+  
+  /* Navbar styling to ensure proper layering */
+  nav {
+    position: relative;
+    z-index: 2;
+  }
+  

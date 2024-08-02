@@ -256,12 +256,12 @@ function WallpaperGallery({ selectedCategory }) {
         );
 
   return (
-    <div className="h-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 px-2 sm:px-0">
+    <div className="h-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-4 px-2 sm:px-0">
       {filteredWallpapers.map((wallpaper) => (
         <motion.div
           key={wallpaper.id}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
           <WallpaperCard wallpaper={wallpaper} />

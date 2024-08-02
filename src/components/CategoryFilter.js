@@ -1,31 +1,39 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faHome, faStar, faImage, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 
-const categories = ['All', 'Super Heros', 'Cartoons', 'Abstract','Couples'];
-
+const categories = [
+  { name: 'All', icon: faHome },
+  { name: 'Super Heroes', icon: faStar },
+  { name: 'Cartoons', icon: faImage },
+  { name: 'Abstract', icon: faHeart },
+  { name: 'Couples', icon: faUser },
+];
 
 function CategoryFilter({ selectedCategory, setSelectedCategory, closeDropdown }) {
   return (
-    <div className="p-4 flex flex-col h-full sm:flex-row sm:justify-around sm:items-center bg-white hover:shadow-inner">
+    <div className="p-4 flex flex-col sm:flex-row sm:justify-around sm:items-center bg-white dark:bg-slate-800 dark:text-white shadow-lg rounded-lg transition-all duration-300 ease-in-out">
       {/* Close Button */}
       <button
         onClick={closeDropdown}
-        className="text-gray-600 hover:text-gray-800 text-2xl p-2 rounded-full mb-4 sm:hidden self-end"
+        className="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100 text-2xl p-2 rounded-full mb-4 sm:hidden self-end focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-slate-200"
       >
         <FontAwesomeIcon icon={faTimes} />
       </button>
       {/* Category List */}
-      <ul className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 overflow-y-auto">
+      <ul className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
         {categories.map((category) => (
-          <li key={category}>
-           <button
-              onClick={() => setSelectedCategory(category)}
-              className={`w-full text-left p-3 rounded-lg hover:bg-slate-400 transition-colors ${
-                selectedCategory === category ? 'bg-slate-600 text-slate-200' : 'bg-white text-slate-500'
-              }`}
+          <li key={category.name} className="flex-shrink-0">
+            <button
+              onClick={() => setSelectedCategory(category.name)}
+              className={`w-full text-left px-4 py-2 rounded-full flex items-center space-x-2 transition-all duration-200 transform hover:scale-105 hover:bg-blue-100 dark:hover:bg-slate-600 ${
+                selectedCategory === category.name
+                  ? 'bg-blue-500 dark:bg-slate-700 text-white'
+                  : 'text-gray-600 dark:text-gray-300'
+              } focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-slate-200`}
             >
-              {category}
+              <FontAwesomeIcon icon={category.icon} />
+              <span>{category.name}</span>
             </button>
           </li>
         ))}
