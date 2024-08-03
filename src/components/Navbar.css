@@ -1,11 +1,11 @@
-/* Star animations */
+Star animations
 .stars {
     position: absolute;
     top: 0;
     left: 0;
     width: 200%;
     height: 200%;
-    background: url('/public/assets/stars.jpg') repeat;
+    background: url('/public/assets/ai-generated-8821487_1280.png') repeat;
     animation: star-animation 100s linear infinite;
     opacity: 0.5;
     pointer-events: none; /* Ensures that it doesn't block other elements */

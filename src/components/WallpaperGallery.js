@@ -4,6 +4,36 @@ import { motion } from "framer-motion";
 
 const wallpapers = [
   {
+    id: 45,
+    url: "/assets/car.jpg",
+    title: "Wallpaper 1",
+    category: "Super Heros",
+  },
+  {
+    id: 44,
+    url: "/assets/spiderman8.jpg",
+    title: "Wallpaper 1",
+    category: "Super Heros",
+  },
+  {
+    id: 43,
+    url: "/assets/spiderman7.jpg",
+    title: "Wallpaper 1",
+    category: "Super Heros",
+  },
+  {
+    id: 42,
+    url: "/assets/spiderman6.jpg",
+    title: "Wallpaper 1",
+    category: "Super Heros",
+  },
+  {
+    id: 41,
+    url: "/assets/spiderman5.jpg",
+    title: "Wallpaper 1",
+    category: "Super Heros",
+  },
+  {
     id: 40,
     url: "/assets/cartoon1.jpg",
     title: "Wallpaper 1",
@@ -247,6 +277,7 @@ const wallpapers = [
   // Add more wallpapers with categories here
 ];
 
+// In your React component
 function WallpaperGallery({ selectedCategory }) {
   const filteredWallpapers =
     selectedCategory === "All"
@@ -256,10 +287,11 @@ function WallpaperGallery({ selectedCategory }) {
         );
 
   return (
-    <div className="h-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-4 px-2 sm:px-0">
+    <div className="gallery-container">
       {filteredWallpapers.map((wallpaper) => (
         <motion.div
           key={wallpaper.id}
+          className="masonry-item"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}

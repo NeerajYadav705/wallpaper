@@ -26,7 +26,7 @@ function Navbar({ selectedCategory, setSelectedCategory }) {
   }, []);
 
   return (
-    <nav className="h-16 bg-slate-900 text-white px-4 py-3 flex justify-between items-center relative shadow-lg">
+    <nav className="h-16 bg-slate-950 text-white px-4 py-3 flex justify-between items-center relative shadow-lg">
       <div className="text-2xl font-bold">Wallpapers For You</div>
 
       <div className="flex items-center space-x-4">
