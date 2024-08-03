@@ -12,11 +12,11 @@ const categories = [
 
 function CategoryFilter({ selectedCategory, setSelectedCategory, closeDropdown }) {
   return (
-    <div className="p-4 flex flex-col sm:flex-row sm:justify-around sm:items-center bg-white dark:bg-slate-800 dark:text-white shadow-lg rounded-lg transition-all duration-300 ease-in-out">
+    <div className="p-4 flex flex-col sm:flex-row sm:justify-around sm:items-center bg-transparent  rounded-lg transition-all duration-300 ease-in-out">
       {/* Close Button */}
       <button
         onClick={closeDropdown}
-        className="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100 text-2xl p-2 rounded-full mb-4 sm:hidden self-end focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-slate-200"
+        className="text-slate-500  hover:text-slate-700 text-2xl p-2 rounded-full mb-4 sm:hidden self-end focus:outline-none"
       >
         <FontAwesomeIcon icon={faTimes} />
       </button>
