@@ -4,11 +4,41 @@ import { motion } from "framer-motion";
 
 const wallpapers = [
   {
-    id: 45,
-    url: "/assets/car.jpg",
+    id: 50,
+    url: "/assets/superman.jpg",
     title: "Wallpaper 1",
     category: "Super Heros",
   },
+  {
+    id: 49,
+    url: "/assets/ironman5.jpg",
+    title: "Wallpaper 1",
+    category: "Super Heros",
+  },
+  {
+    id: 48,
+    url: "/assets/deadpool.jpg",
+    title: "Wallpaper 1",
+    category: "Super Heros",
+  },
+  {
+    id: 47,
+    url: "/assets/abstract5.jpg",
+    title: "Wallpaper 1",
+    category: "Abstract",
+  },
+  {
+    id: 46,
+    url: "/assets/abstract4.jpg",
+    title: "Wallpaper 1",
+    category: "Abstract",
+  },
+  // {
+  //   id: 45,
+  //   url: "/assets/car.jpg",
+  //   title: "Wallpaper 1",
+  //   category: "Super Heros",
+  // },
   {
     id: 44,
     url: "/assets/spiderman8.jpg",
