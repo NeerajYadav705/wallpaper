@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import WallpaperCard from "./WallpaperCard";
 import { motion } from "framer-motion";
 
+
+
+
+
 const wallpapers = [
+  {
+    id: 51,
+    url: "/assets/batman1.jpg",
+    title: "Wallpaper 1",
+    category: "Super Heros",
+  },
   {
     id: 50,
     url: "/assets/superman.jpg",
@@ -306,6 +316,27 @@ const wallpapers = [
 
   // Add more wallpapers with categories here
 ];
+
+
+// function WallpaperGallery({ selectedCategory }) {
+//   const [wallpapers, setWallpapers] = useState([]);
+
+//   useEffect(() => {
+//     const loadWallpapers = () => {
+//       if (selectedCategory === "All") {
+//         // Combine all categories into one array
+//         const allWallpapers = Object.values(wallpapersData).flat();
+//         setWallpapers(allWallpapers);
+//       } else {
+//         setWallpapers(wallpapersData[selectedCategory] || []);
+//       }
+//     };
+//     loadWallpapers();
+//   }, [selectedCategory]);
+
+
+
+
 
 // In your React component
 function WallpaperGallery({ selectedCategory }) {

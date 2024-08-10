@@ -1,0 +1,14 @@
+{
+  "Super Heros": [
+    { "id": 45, "url": "/assets/car.jpg", "title": "Wallpaper 1" },
+    { "id": 44, "url": "/assets/spiderman8.jpg", "title": "Wallpaper 1" }
+  ],
+  "Cartoons": [
+    { "id": 11, "url": "/assets/bean.jpg", "title": "Wallpaper 1" },
+    { "id": 12, "url": "/assets/cars.jpg", "title": "Wallpaper 1" }
+  ],
+  "Abstract": [
+    { "id": 11, "url": "/assets/bean.jpg", "title": "Wallpaper 1" },
+    { "id": 12, "url": "/assets/cars.jpg", "title": "Wallpaper 1" }
+  ]
+}
