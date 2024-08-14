@@ -10,8 +10,13 @@ function WelcomeScreen({ setShowWelcomeScreen }) {
   }, [setShowWelcomeScreen]);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-900 text-white z-50 opacity-100 animate-fadeOut">
-      <h1 className="text-4xl font-bold">Welcome to My Website</h1>
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 text-white z-50 opacity-100 animate-fadeOut">
+      <h1 className="text-5xl font-extrabold tracking-wide animate-slideIn">
+        Wallpapers for You
+      </h1>
+      <p className="absolute bottom-4 right-6 text-sm">
+        Created by Neeraj Yadav
+      </p>
     </div>
   );
 }
