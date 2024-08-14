@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import WallpaperCard from "./WallpaperCard";
 import { motion } from "framer-motion";
 
-
-
-
-
 const wallpapers = [
   {
     id: 51,
