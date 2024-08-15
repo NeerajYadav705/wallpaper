@@ -3,6 +3,42 @@ import { motion } from "framer-motion";
 
 const wallpapers = [
   {
+    id: 57,
+    url: "/assets/abstract9.jpg",
+    title: "Wallpaper 1",
+    category: "Abstract",
+  },
+  {
+    id: 56,
+    url: "/assets/abstract8.jpg",
+    title: "Wallpaper 1",
+    category: "Abstract",
+  },
+  {
+    id: 55,
+    url: "/assets/abstract7.jpg",
+    title: "Wallpaper 1",
+    category: "Abstract",
+  },
+  {
+    id: 54,
+    url: "/assets/abstract6.jpg",
+    title: "Wallpaper 1",
+    category: "Abstract",
+  },
+  {
+    id: 53,
+    url: "/assets/robot.jpg",
+    title: "Wallpaper 1",
+    category: "Abstract",
+  },
+  {
+    id: 52,
+    url: "/assets/spiderman9.jpg",
+    title: "Wallpaper 1",
+    category: "Super Heros",
+  },
+  {
     id: 51,
     url: "/assets/batman1.jpg",
     title: "Wallpaper 1",
