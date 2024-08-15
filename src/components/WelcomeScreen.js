@@ -10,13 +10,13 @@ function WelcomeScreen({ setShowWelcomeScreen }) {
   }, [setShowWelcomeScreen]);
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-slate-950 text-white z-50 opacity-100 animate-fadeOut">
-      <h1 className="text-5xl font-extrabold tracking-wide animate-slideIn">
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-black text-white z-50 opacity-100 animate-fadeOut">
+      <h1 className="text-6xl font-extrabold tracking-widest animate-fadeIn">
         Wallpapers for You
       </h1>
-      <p className="absolute bottom-4 right-6 text-sm">
+      <h1 className="absolute bottom-8 right-8 text-sm font-light tracking-wide animate-fadeIn">
         Created by Neeraj Yadav
-      </p>
+      </h1>
     </div>
   );
 }
