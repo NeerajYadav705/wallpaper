@@ -349,26 +349,6 @@ const wallpapers = [
 ];
 
 
-// function WallpaperGallery({ selectedCategory }) {
-//   const [wallpapers, setWallpapers] = useState([]);
-
-//   useEffect(() => {
-//     const loadWallpapers = () => {
-//       if (selectedCategory === "All") {
-//         // Combine all categories into one array
-//         const allWallpapers = Object.values(wallpapersData).flat();
-//         setWallpapers(allWallpapers);
-//       } else {
-//         setWallpapers(wallpapersData[selectedCategory] || []);
-//       }
-//     };
-//     loadWallpapers();
-//   }, [selectedCategory]);
-
-
-
-
-
 // In your React component
 function WallpaperGallery({ selectedCategory }) {
   const filteredWallpapers =
